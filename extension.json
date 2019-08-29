@@ -1,0 +1,52 @@
+{
+	"name": "SemanticAuthProfiling",
+	"version": "1.0.0",
+	"manifest_version": "1",
+	"author": [
+		"Giacomo Lorenzo",
+		"Matteo Busanelli"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:BoilerPlate",
+	"descriptionmsg": "boilerplate-desc",
+	"license-name": "MIT",
+	"type": "hook",
+	"AutoloadClasses": {
+		"SemanticAuthProfiling": "SemanticAuthProfiling.php",
+		"SpecialSemanticAuthProfiling": "specials/SpecialSemanticAuthProfiling.php"
+	},
+	"config": {
+		"SemanticAuthProfilingEditCategories": {},
+		"SemanticAuthProfilingDeleteCategories":{},
+		"SemanticAuthProfilingMoveCategories":{},
+		"SemanticAuthProfilingViewCategories":{},
+		"SemanticAuthProfilingCreateCategories":{},
+		"SemanticAuthProfilingDefaultPermissionEdit":{},
+		"SemanticAuthProfilingDefaultPermissionView":{},
+		"SemanticAuthProfilingDefaultPermissionMove":{},
+		"SemanticAuthProfilingDefaultPermissionCreate":{}
+	},
+	"callback": "BoilerPlateHooks::onExtensionLoad",
+	"ExtensionMessagesFiles": {
+		"BoilerPlateAlias": "BoilerPlate.i18n.alias.php"
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "SemanticAuthProfiling"
+	},
+	"Hooks": {
+		"MediaWikiPerformAction": [
+			"MediaWikiPerformAction::onMediaWikiPerformAction"
+		],
+		"BeforePageDisplay":[
+			"BeforePageDisplay::onBeforePageDisplay"
+			]
+	},
+	"MessagesDirs": {
+		"SemanticAuthProfiling": [
+			"i18n"
+		]
+	},
+	"SpecialPages": {
+		"SemanticAuthProfiling": "SpecialSemanticAuthProfiling"
+	}
+}

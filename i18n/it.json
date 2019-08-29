@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gabriele Morlini,Giacomo Lorenzo"
+		]
+	},
+	"custompermission-desc": "Gestore dei permessi di amministrazione della singola pagina per le action.",
+	"permission-error": "Permessi insufficienti",
+	"custompermission-error-message": "L'utente $1 non hai i permessi per modificare la pagina.",
+	"custompermission-error-show-page": "L'utente $1 non hai i permessi per visualizzare la pagina.",
+        "custompermission-error-move-page": "L'utente $1 non ha i permessi di muovere questa pagina.", 
+	"custompermission-error-create-page": "L'utente $1 non hai i permessi per creare la pagina di tipo $2."
+}

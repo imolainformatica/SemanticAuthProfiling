@@ -1,0 +1,4 @@
+require_once( "{{path}}/SelectiveAction/SelectiveAction.php" );
+
+# see SelectiveAction/README for instructions on configuration
+

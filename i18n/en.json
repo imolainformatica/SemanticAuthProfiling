@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gabriele Morlini,Giacomo Lorenzo"
+		]
+	},
+	"custompermission-desc": "Policy Manager of single page for the action.",
+	"permission-error": "Operation Forbidden",
+        "custompermission-error-message": "The user $1 can't edit this page.",
+	"custompermission-error-show-page": "User $1 can't view current page.",
+        "custompermission-error-move-page": "User $1 can't move the current page.",
+	"custompermission-error-create-page": "User \"$1\" can't create the page of type $2 ."
+}

@@ -1,0 +1,63 @@
+--------------------------------------------------------------------------
+README for the SelectiveAction extension
+Copyright © 2016 Gabriele Morlini
+Licenses: GNU General Public Licence (GPL)
+          GNU Free Documentation License (GFDL)
+--------------------------------------------------------------------------
+
+
+== Installing ==
+
+Copy the SelectiveAction directory into the extensions folder of your 
+MediaWiki installation. Then add the following lines to your
+LocalSettings.php file (near the end):
+
+########## Sicurezza sulle azioni ####################
+
+#definizione gruppo custom
+$wgGroupPermissions['architetti'][''] = true;
+#Utenti autoconfermati con stessi diritti di fatto degli scrittori perchè tanto nuova estensione blocca tutto
+$wgGroupPermissions['autoconfirmed']['viewedittab'] = true;
+$wgGroupPermissions['autoconfirmed']['edit']        = true;
+$wgGroupPermissions['autoconfirmed']['move']        = true;
+$wgGroupPermissions['autoconfirmed']['upload']      = true; #allows the creation of new images and files (requires the edit right).
+$wgGroupPermissions['autoconfirmed']['reupload']    = true; #allows overwriting existing images and files (requires the upload right).
+$wgGroupPermissions['autoconfirmed']['delete'] = true;
+$wgGroupPermissions['autoconfirmed']['undelete'] = true;
+#inclusione estensione generica
+require_once("$IP/extensions/SelectiveAction/SelectiveAction.php");
+#inclusione estensione specifica per BPM qui sono presenti le query che a partire dal utente determinano le pagine di cui è admin
+require_once("$IP/extensions/SelectiveAction/FromUserToPageAdmin_Bpm.php");
+# Permission for action
+$wgPageUserActionPermission['formedit'] = false;
+$wgPageUserActionPermission['edit'] = false;
+$wgPageUserActionPermission['createpage'] = false;
+# nome del gruppo che può fare tutto (sysop comunque ha sempre tutti i diritti)
+$wgPageUserMasterGroup = "architetti";
+#in secondi dopo quanto prevedere un refresh delle pagine di cui sono admin
+$wgSelectiveActionResetTime = 3600;
+#categorie di pagine da proteggere in modifica
+$wgSelectiveActionEditCategories = array('Applicazione', 'Componente Applicativo','Modulo del Framework', 'Host fisico','Host virtuale','Componente Hardware','Componente Software','Datastore','Sistema Operativo','Costo','Project',);
+#categorie di pagine da proteggere in creazione
+$wgSelectiveActionCreateCategories = array('Applicazione', 'Modulo del Framework');
+== Configuration BPM ==
+
+Has owner si applica potenzialmente a:
+Applicazione
+Componente Applicativo
+Componente Hardware 
+Componente Software
+Datastore
+Host fisico
+Host virtuale 
+Modulo del Framework 
+Sistema Operativo 
+
+Has unit owner si applica potenzialmente a:
+Applicazione
+Componente Applicativo
+Componente Software
+Costo
+Modulo del Framework
+Project
+
