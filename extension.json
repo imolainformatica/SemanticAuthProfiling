@@ -9,10 +9,9 @@
 	"url": "https://www.mediawiki.org/wiki/Extension:BoilerPlate",
 	"descriptionmsg": "boilerplate-desc",
 	"license-name": "MIT",
-	"type": "hook",
+	"type": "other",
 	"AutoloadClasses": {
-		"SemanticAuthProfiling": "SemanticAuthProfiling.php",
-		"SpecialSemanticAuthProfiling": "specials/SpecialSemanticAuthProfiling.php"
+		"SemanticAuthProfiling": "SemanticAuthProfiling.php"
 	},
 	"config": {
 		"SemanticAuthProfilingEditCategories": {},
@@ -23,11 +22,12 @@
 		"SemanticAuthProfilingDefaultPermissionEdit":{},
 		"SemanticAuthProfilingDefaultPermissionView":{},
 		"SemanticAuthProfilingDefaultPermissionMove":{},
-		"SemanticAuthProfilingDefaultPermissionCreate":{}
+		"SemanticAuthProfilingDefaultPermissionCreate":{},
+                "SemanticAuthProfiingProperty":{}
+
 	},
-	"callback": "BoilerPlateHooks::onExtensionLoad",
 	"ExtensionMessagesFiles": {
-		"BoilerPlateAlias": "BoilerPlate.i18n.alias.php"
+		"BoilerPlateAlias": "SemanticAuthProfiling.i18n.php"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
@@ -35,10 +35,10 @@
 	},
 	"Hooks": {
 		"MediaWikiPerformAction": [
-			"MediaWikiPerformAction::onMediaWikiPerformAction"
+			"SemanticAuthProfiling::onMediaWikiPerformAction"
 		],
 		"BeforePageDisplay":[
-			"BeforePageDisplay::onBeforePageDisplay"
+			"SemanticAuthProfiling::onBeforePageDisplay"
 			]
 	},
 	"MessagesDirs": {
