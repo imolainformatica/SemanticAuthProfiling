@@ -45,11 +45,11 @@ $wgSemanticAuthProfilingDefaultPermissionCreate=false;
 ### Profiling
 Define profiling for each group need to declare a row for each group need to profiling
 ```php
-$wgSelectiveActionViewCategories ['Gruppo-Wiki']['Category-value']= true;
-$wgSelectiveActionEditCategories ['IT_Project_Manager']['Project'] = true;
-$wgSelectiveActionMoveCategories['Gruppo-Wiki']['Category-value']= true;
-$wgSelectiveActionCreateCategories['Gruppo-Wiki']['Category-value']= true;
-$wgSelectiveActionDeleteCategories['Gruppo-Wiki']['Category-value']= true;
+$wgSemanticAuthProfilingViewCategories ['Gruppo-Wiki']['Category-value']= true;
+$wgSemanticAuthProfilingEditCategories ['Gruppo-Wiki']['Category-value'] = true;
+$wgSemanticAuthProfilingMoveCategories['Gruppo-Wiki']['Category-value']= true;
+$wgSemanticAuthProfilingCreateCategories['Gruppo-Wiki']['Category-value']= true;
+$wgSemanticAuthProfilingDeleteCategories['Gruppo-Wiki']['Category-value']= true;
 ```
 
 ### Wildcard 
