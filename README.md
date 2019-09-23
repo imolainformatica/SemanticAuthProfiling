@@ -4,7 +4,7 @@ Copyright © 2019 Giacomo Lorenzo
 Licenses: GNU General Public Licence (GPL)
           GNU Free Documentation License (GFDL)
 --------------------------------------------------------------------------
-#Installation
+# Installation
 ```php
 wfLoadExtension( 'SemanticAuthProfiling' );
 ```
