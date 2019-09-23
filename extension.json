@@ -6,8 +6,8 @@
 		"Giacomo Lorenzo",
 		"Matteo Busanelli"
 	],
-	"url": "https://www.mediawiki.org/wiki/Extension:BoilerPlate",
-	"descriptionmsg": "boilerplate-desc",
+	"url": "https://www.mediawiki.org/wiki/Extension:SemanticAuthProfiling",
+	"descriptionmsg": "Profiling Extensions",
 	"license-name": "MIT",
 	"type": "other",
 	"AutoloadClasses": {
