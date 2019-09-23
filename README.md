@@ -52,7 +52,7 @@ $wgSelectiveActionCreateCategories['Gruppo-Wiki']['Category-value']= true;
 $wgSelectiveActionDeleteCategories['Gruppo-Wiki']['Category-value']= true;
 ```
 
-#Wildcard 
+# Wildcard 
 need to manage an action for all categories
 ```php
 $wgSelectiveActionViewCategories ['Gruppo-Wiki']['*']= true;
